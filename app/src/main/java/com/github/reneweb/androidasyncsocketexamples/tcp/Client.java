@@ -1,4 +1,4 @@
-package com.github.reweber.androidasyncsocketexamples.tcp;
+package com.github.reneweb.androidasyncsocketexamples.tcp;
 
 import com.koushikdutta.async.*;
 import com.koushikdutta.async.callback.CompletedCallback;
@@ -7,9 +7,6 @@ import com.koushikdutta.async.callback.DataCallback;
 
 import java.net.InetSocketAddress;
 
-/**
- * Created by reweber on 12/20/14.
- */
 public class Client {
 
     private String host;

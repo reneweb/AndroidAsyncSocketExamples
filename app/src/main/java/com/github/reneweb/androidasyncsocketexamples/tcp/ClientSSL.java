@@ -1,4 +1,4 @@
-package com.github.reweber.androidasyncsocketexamples.tcp;
+package com.github.reneweb.androidasyncsocketexamples.tcp;
 
 import com.koushikdutta.async.*;
 import com.koushikdutta.async.callback.CompletedCallback;
@@ -17,9 +17,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
 
-/**
- * Created by reweber on 12/20/14.
- */
 public class ClientSSL {
     private String host;
     private int port;
@@ -36,12 +33,8 @@ public class ClientSSL {
             public void onConnectCompleted(Exception ex, final AsyncSocket socket) {
                 try {
                     handleConnectCompleted(ex, socket);
-                } catch(NoSuchAlgorithmException nsae) {
-                    nsae.printStackTrace();
+                } catch(NoSuchAlgorithmException | KeyManagementException nsae) {
                     throw new RuntimeException(nsae);
-                } catch(KeyManagementException ke) {
-                    ke.printStackTrace();
-                    throw new RuntimeException(ke);
                 }
             }
         });

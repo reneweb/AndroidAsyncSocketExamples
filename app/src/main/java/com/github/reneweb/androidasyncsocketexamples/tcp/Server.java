@@ -1,4 +1,4 @@
-package com.github.reweber.androidasyncsocketexamples.tcp;
+package com.github.reneweb.androidasyncsocketexamples.tcp;
 
 import com.koushikdutta.async.*;
 import com.koushikdutta.async.callback.CompletedCallback;
@@ -8,9 +8,6 @@ import com.koushikdutta.async.callback.ListenCallback;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-/**
- * Created by reweber on 12/20/14.
- */
 public class Server {
 
     private InetAddress host;
@@ -20,7 +17,6 @@ public class Server {
         try {
             this.host = InetAddress.getByName(host);
         } catch (UnknownHostException e) {
-            e.printStackTrace();
             throw new RuntimeException(e);
         }
 

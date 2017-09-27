@@ -1,4 +1,4 @@
-package com.github.reweber.androidasyncsocketexamples.udp;
+package com.github.reneweb.androidasyncsocketexamples.udp;
 
 import com.koushikdutta.async.AsyncDatagramSocket;
 import com.koushikdutta.async.AsyncServer;
@@ -9,11 +9,7 @@ import com.koushikdutta.async.callback.DataCallback;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
 
-/**
- * Created by reweber on 12/20/14.
- */
 public class Server {
 
     private InetSocketAddress host;
@@ -29,7 +25,6 @@ public class Server {
         try {
             asyncDatagramSocket = AsyncServer.getDefault().openDatagram(host, true);
         } catch (IOException e) {
-            e.printStackTrace();
             throw new RuntimeException(e);
         }
 
@@ -55,10 +50,5 @@ public class Server {
                 System.out.println("[Server] Successfully end connection");
             }
         });
-    }
-
-
-    public void send(String msg) {
-        asyncDatagramSocket.send(host, ByteBuffer.wrap(msg.getBytes()));
     }
 }
